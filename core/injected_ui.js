@@ -426,11 +426,11 @@ function markChatAsBlocked(chat)
         {
             warningMessage = document.createElement('div');
             warningMessage.setAttribute('class', 'incognito-message middle');
-            warningMessage.innerHTML = "Read receipts were blocked.";
+            warningMessage.innerHTML = "Os recibos de leitura foram bloqueados.";
 
             var sendButton = document.createElement('div');
             sendButton.setAttribute('class', 'incognito-send-button');
-            sendButton.innerHTML = "Mark as read";
+            sendButton.innerHTML = "Marcar como lido";
             warningMessage.appendChild(sendButton);
         }
         else
@@ -441,7 +441,7 @@ function markChatAsBlocked(chat)
 
         var sendButton = warningMessage.lastChild;
         sendButton.setAttribute('class', 'incognito-send-button');
-        sendButton.innerHTML = "Mark as read";
+        sendButton.innerHTML = "Marcar como lido";
         sendButton.onclick = function ()
         {
             var data = {
@@ -502,7 +502,7 @@ function markChatAsBlocked(chat)
         Velocity(warningMessage, { scaleY: [1, 0], opacity: [1, 0] }, { defaultDuration: 400, easing: [.1, .82, .25, 1] });
 
     if (warningMessage)
-        warningMessage.firstChild.textContent = "Read receipts were blocked.";
+        warningMessage.firstChild.textContent = "Os recibos de leitura foram bloqueados.";
 }
 
 setTimeout(function() {
